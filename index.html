@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>My A-Frame Scene</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="http://192.168.1.58:8080/vr_test/aframe-stereo-component.js"></script> 
+  </head>
+  <body>
+
+    <a-scene renderer="antialias: true">
+      <!-- Paths to left and right images -->
+      <!-- <a-assets>
+        <img id="left" src="http://192.168.1.58:8080/left.jpg">
+        <img id="right" src="http://192.168.1.58:8080/right.jpg">
+      </a-assets> -->
+
+      <!-- Camera -->
+      <a-entity camera look-controls position="0 0 0" stereocam="eye:left;"></a-entity>
+      
+
+      <!-- <-- or alternatively -->
+      <a-sky id="sky1" src="http://192.168.1.58:8080/vr_test/left.jpg" stereo="eye:left"></a-sky>
+      <a-sky id="sky2" src="http://192.168.1.58:8080/vr_test/right.jpg" stereo="eye:right"></a-sky>
+
+
+    </a-scene>
+
+  </body>
+</html>
